@@ -1,0 +1,117 @@
+// To check the git version
+git --version
+
+//where i am right now 
+pwd
+
+//setup your email and username in this config file
+git config --global user.email "your-email@example.com"
+git config --global user.name "Your Name"
+
+// To check the git status
+git status
+
+//git to track repo
+//will create a new folder on your system and initialize it as a git repository. This adds a hidden .git folder to your project
+git init
+
+//stage a all the file
+git add .
+
+//committing the changes to the repository
+git commit -m "commit message"
+
+//shows the commit history for the current branch
+git log
+
+//to check the logs in short
+git log --oneline
+
+// take tree id from raw datas
+git show -s --pretty=raw <commit-hash>
+
+//get the tree object
+git ls-tree <tree-id>
+
+//get the blob object
+git show <blob-id>
+
+//get the commit object
+git cat-file -p <commit-id>
+
+// command lists all the branches in the current repository
+git branch
+
+//creates a new branch called bug-fix
+git branch bug-fix
+
+//command switches to the bug-fix branch
+git switch bug-fix
+
+//switches to the master branch
+git switch master
+
+//switch your working directory
+git checkout master
+
+//combine the changes from the bug-fix branch into your current branch
+git merge bug-fix
+
+//rename a branch
+git branch -m <old-branch-name> <new-branch-name>
+
+//delete a branch   
+git branch -d <branch-name>
+
+//checkout a branch 
+git checkout <branch-name>
+
+//list all branches
+git branch 
+
+//shows the differences between two commits
+git diff
+
+//Comparing Staging Area with Repository
+git diff --staged
+
+//Comparing Two Branches(you can do the same without .. using space)
+git diff branch-name-one..branch-name-two
+
+//Stash is a way to save your changes in a temporary location
+git stash
+
+//name the stash
+git stash save "stash-name"
+
+//View the stash list
+git stash list
+
+//apply the stash 
+git stash apply
+
+//apply a specific stash
+git stash apply stash@{0}
+
+//delete a specific stash
+git stash drop stash@{0}
+
+//Applying and Drop a Stash
+git stash pop
+git stash drop
+
+//Clearing the stash
+git stash clear
+
+//Create an annotated tag
+git tag -a <tag-name> -m "Release 1.0"
+
+//git rebase command is used to integrate changes from one branch into another
+git rebase <base-branch>
+
+//Git reflog is a command that shows you the history of your commits
+git reflog
+
+//find a specific commit and then reset your branch to that reference.
+git reflog <commit-hash>
+git reset --hard <commit-hash>
